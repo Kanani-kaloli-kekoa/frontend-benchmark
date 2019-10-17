@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "base.css" %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel = "Document" href "{% static "create_entries.html"%}">
-    <script src="{% static "base.js" %}" defer> </script>
     <title>Document</title>
 </head>
 <body>
+     <form action="{% url 'top_entries' %}" method ="post">
+     <ul>
+     {{%for entry in entries%}}
+     <li>{{%entry.titles%}}</li>
+     
+{% csrf_token %}
+<label> Top Entries: <label>
 
-
-
-
-    
+</form>
 </body>
 </html>

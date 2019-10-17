@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "base.css" %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel = "Document" href "{% static "create_entries.html"%}">
-    <script src="{% static "base.js" %}" defer> </script>
     <title>Document</title>
 </head>
 <body>
+<form action="{% url 'create_entry' %}" method ="post">
+{% csrf_token %}
+<label> Title : </label>
+<input type ="text" name = "entry" id ="entry">
+<button class= "submit">submit</button>
+</form>
+{{entries.title}}
 
-
-
-
-    
 </body>
 </html>
