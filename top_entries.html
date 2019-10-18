@@ -8,11 +8,12 @@
 </head>
 <body>
      <form action="{% url 'top_entries' %}" method ="post">
+     {% csrf_token %}
      <ul>
-     {{%for entry in entries%}}
-     <li>{{%entry.titles%}}</li>
+     {{% for entry in entries %}}
+     <li>{{% entry.content %}}</li>
      
-{% csrf_token %}
+
 <label> Top Entries: <label>
 
 </form>

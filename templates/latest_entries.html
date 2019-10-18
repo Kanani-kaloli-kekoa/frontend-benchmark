@@ -8,16 +8,20 @@
     <title>Document</title>
 </head>
 <body>
+<a href = 'create_entry' >
+<form action = "{% url 'latest_entries' %}" method= "post">
+{% csrf_token %}
 <ul>
 
     {% for entry in entries %}
     <li>
-    {{entries.content.likes}}</li>
+    {{entry.content}}</li>
     </ul>
     {% endfor %}
-    
+</form>
+<form action ="{% url 'like_entry'%}" method = fetch
+<button class="likes"> Like</like>
 {% csrf_token %}
-
 </form>
 </body>
 </html>
