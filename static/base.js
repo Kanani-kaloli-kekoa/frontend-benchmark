@@ -1,11 +1,11 @@
-const button = document.querySelector("#likes");
+//const button = document.querySelector("#likes");
 
 
-button.addEventListener("click", () => {
-    const url = `entries/entry4/like?=${button.value}`
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
+//button.addEventListener("click", () => {
+    //const url = `entries/entry4/like?=${button.value}`
+    //fetch(url)
+       // .then(response => response.json())
+      //ss  .then(data => {
 
-        })
-})
+      //  })
+//})

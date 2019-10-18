@@ -9,13 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{% url 'create_entry' %}" method ="post">
+<form action = "{% url 'create_entry' %}" method= "post">
 {% csrf_token %}
-<label> Title : </label>
-<input type ="text" name = "entry" id ="entry" name = "content">
-<button class= "submit">submit</button>
+<input type="textarea" name = "content">
+<label>message: </label>
+<button type= "submit">submit</button>
 </form>
-{{entry.title}}
 
 </body>
 </html>
