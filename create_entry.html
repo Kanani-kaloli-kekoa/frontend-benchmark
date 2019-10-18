@@ -1,19 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{% static "base.js" %}" defer> </script>
     <title>Document</title>
 </head>
 <body>
 <form action="{% url 'create_entry' %}" method ="post">
 {% csrf_token %}
 <label> Title : </label>
-<input type ="text" name = "entry" id ="entry">
+<input type ="text" name = "entry" id ="entry" name = "content">
 <button class= "submit">submit</button>
 </form>
-{{entr.title}}
+{{entry.title}}
 
 </body>
 </html>
