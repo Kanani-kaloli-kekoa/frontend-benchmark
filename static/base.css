@@ -1,8 +1,11 @@
-.like_entry{
+.like_entry {
     border: 1px solid grey;
-
 }
-.create_entry{
+
+.create_entry {
     border: 8rem;
-    
+}
+
+.space {
+    margin: 3px;
 }

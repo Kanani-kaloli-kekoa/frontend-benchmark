@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="{% static "base.js" %}" defer> </script>
+   <a href='/entries/new'>Create Entry</a>
+    <a href="/entries/">Latest Entries</a>
     <title>Document</title>
+    <div class="space"></div>
 </head>
-<!--<body>
+<body>
+<label> Top Entries: <label>
      <form action="{% url 'top_entries' %}" method ="post">
      {% csrf_token %}
      <ul>
-     {{% for entry in entries %}}
-     <li>{{% entry.content %}}
+     {% for entry in entries %}
+     <li>{{entry.content}} {{entry.likes}}
      
      </li>
-     
+     {% endfor %}</ul>
 
-<label> Top Entries: <label>
+
 
 </form>
 </body>
-</html>-->
+</html>

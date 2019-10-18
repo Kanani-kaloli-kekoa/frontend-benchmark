@@ -6,23 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="{% static "base.js" %}" defer> </script>
-    <a href='/entries/new'>Create Entry</a>
     <a href="/entries/top">Top Entries</a>
+    <a href="/entries/">Latest Entries</a>
     <title>Document</title>
-    
 </head>
 <body>
-<form action = "{% url 'latest_entries' %}" method= "post">
+<form action = "{% url 'create_entry' %}" method= "post">
 {% csrf_token %}
-<label>Latest Entries :</label>
-<ul>
-    {% for entry in entries %}
-    <li>
-    {{entry.content}}</li>
-    
-    {% endfor %}</ul>
+<label>message: </label>
+<input type="textarea" name = "content">
+
+<button type= "submit">submit</button>
 </form>
 
-</form>
 </body>
 </html>
